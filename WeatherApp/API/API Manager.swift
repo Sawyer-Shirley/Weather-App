@@ -28,7 +28,7 @@ struct APIManager {
     
     print(APIKeys.DarkSkyKey)
     
-    let url = rootURL + key + "/" + String(location.longitude) + "," + String(location.latitude)
+    let url = rootURL + key + "/" + String(location.latitude) + "," + String(location.longitude)
     
     Alamofire.request(url).responseJSON { response in
         switch response.result {

@@ -92,7 +92,7 @@ class WeatherData {
         }
         
         guard let condition = Condition(rawValue: conditionString) else {
-            //print("GOT THE CONDITION")
+            
             return nil
         }
         

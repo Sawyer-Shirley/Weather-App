@@ -19,6 +19,8 @@ class ViewController: UITableViewController {
     @IBOutlet weak var iconView: UIImageView!
     @IBOutlet weak var tempStaticLabel: UILabel!
     
+    var layer = CAGradientLayer()
+    
     
     var displayWeatherData: WeatherData! {
         didSet {
@@ -30,17 +32,75 @@ class ViewController: UITableViewController {
             
             switch displayWeatherData.condition {
             case .partlyCloudyDay:
+                layer.removeFromSuperlayer()
                 weatherLabel.text = "Partly Cloudy Day"
-                let layer = CAGradientLayer()
+                layer = CAGradientLayer()
                 layer.frame = self.view.bounds
-                layer.colors = [UIColor.darkGray.cgColor, UIColor.yellow.cgColor, UIColor.darkGray.cgColor]
+                layer.colors = [UIColor.blue.cgColor, UIColor.white.cgColor]
                 layer.opacity = 1.0
                 self.view.layer.insertSublayer(layer, at: 0)
             case .partlyCloudyNight:
+                layer.removeFromSuperlayer()
                 weatherLabel.text = "Partly Cloudy Night"
-                let layer = CAGradientLayer()
+                layer = CAGradientLayer()
                 layer.frame = self.view.bounds
-                layer.colors = [UIColor.blue.cgColor, UIColor.darkGray.cgColor]
+                layer.colors = [UIColor.black.cgColor, UIColor.darkGray.cgColor]
+                layer.opacity = 1.0
+                self.view.layer.insertSublayer(layer, at: 0)
+            case .clearDay:
+                layer.removeFromSuperlayer()
+                weatherLabel.text = "Clear Day"
+                layer = CAGradientLayer()
+                layer.frame = self.view.bounds
+                layer.colors = [UIColor.blue.cgColor, UIColor.white.cgColor]
+                layer.opacity = 1.0
+                self.view.layer.insertSublayer(layer, at: 0)
+            case .cloudy:
+                layer.removeFromSuperlayer()
+                weatherLabel.text = "Cloudy"
+                layer = CAGradientLayer()
+                layer.frame = self.view.bounds
+                layer.colors = [UIColor.gray.cgColor, UIColor.white.cgColor]
+                layer.opacity = 1.0
+                self.view.layer.insertSublayer(layer, at: 0)
+            case .rain:
+                layer.removeFromSuperlayer()
+                weatherLabel.text = "Rainy"
+                layer = CAGradientLayer()
+                layer.frame = self.view.bounds
+                layer.colors = [UIColor.darkGray.cgColor, UIColor.blue.cgColor]
+                layer.opacity = 1.0
+                self.view.layer.insertSublayer(layer, at: 0)
+            case .snow:
+                layer.removeFromSuperlayer()
+                weatherLabel.text = "Snowy"
+                layer = CAGradientLayer()
+                layer.frame = self.view.bounds
+                layer.colors = [UIColor.gray.cgColor, UIColor.white.cgColor]
+                layer.opacity = 1.0
+                self.view.layer.insertSublayer(layer, at: 0)
+            case .fog:
+                layer.removeFromSuperlayer()
+                weatherLabel.text = "Foggy"
+                layer = CAGradientLayer()
+                layer.frame = self.view.bounds
+                layer.colors = [UIColor.darkGray.cgColor, UIColor.gray.cgColor]
+                layer.opacity = 1.0
+                self.view.layer.insertSublayer(layer, at: 0)
+            case .sleet:
+                layer.removeFromSuperlayer()
+                weatherLabel.text = "Sleet"
+                layer = CAGradientLayer()
+                layer.frame = self.view.bounds
+                layer.colors = [UIColor.darkGray.cgColor, UIColor.white.cgColor]
+                layer.opacity = 1.0
+                self.view.layer.insertSublayer(layer, at: 0)
+            case .wind:
+                layer.removeFromSuperlayer()
+                weatherLabel.text = "Windy"
+                layer = CAGradientLayer()
+                layer.frame = self.view.bounds
+                layer.colors = [UIColor.blue.cgColor, UIColor.white.cgColor]
                 layer.opacity = 1.0
                 self.view.layer.insertSublayer(layer, at: 0)
             default:
@@ -59,15 +119,10 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-//        let longitude = 37.8267
-//        let latitude = -122.4233
+
         
         setupDefaultUI()
-//        APIManager.getWeather(for: (latitude, longitude)) { weatherData, error in
-//            if let recievedData = weatherData {
-//                self.displayWeatherData = recievedData
-//            }
-//        }
+        
     }
     
     func setupDefaultUI() {

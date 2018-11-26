@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="305.5" width="375" height="56"/>
                                 <color key="backgroundColor" red="0.43076005579999999" green="0.62241137030000004" blue="0.70589119199999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" red="0.43076005579999999" green="0.62241137030000004" blue="0.70589119199999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="barTintColor" red="0.43076005579999999" green="0.62241137030000004" blue="0.70589119199999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93z-W9-F2D">
@@ -32,7 +32,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.43076005579999999" green="0.62241137030000004" blue="0.70589119199999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Dj8-jF-u1b" firstAttribute="trailing" secondItem="lii-bH-uy6" secondAttribute="trailing" id="5Ol-Vq-16d"/>
                             <constraint firstItem="Dj8-jF-u1b" firstAttribute="leading" secondItem="lii-bH-uy6" secondAttribute="leading" id="Fa5-e8-lk0"/>
